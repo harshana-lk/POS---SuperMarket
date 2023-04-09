@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Main-Class: lk.crewx.pos.Launcher
+Class-Path: javafx-fxml-19.jar jcommon-1.0.23.jar commons-logging-1.1.1.
+ jar bcutil-jdk15on-1.70.jar woodstox-core-6.2.7.jar javafx-base-11.jar 
+ javax.mail-1.5.1.jar javafx-graphics-11.jar commons-collections4-4.2.ja
+ r javafx-fxml-19-win.jar javax.mail-api-1.6.2.jar jfoenix-9.0.1.jar jav
+ afx-graphics-11-win.jar fontawesomefx-8.5.jar javafx-base-11-win.jar ja
+ ckson-annotations-2.13.3.jar javafx-controls-11-win.jar commons-digeste
+ r-2.1.jar jackson-databind-2.13.3.jar commons-collections-3.2.2.jar pro
+ tobuf-java-3.19.4.jar activation-1.1.jar jackson-dataformat-xml-2.13.3.
+ jar controlsfx-11.1.2.jar mysql-connector-j-8.0.31.jar jasperreports-6.
+ 20.0.jar bcprov-jdk15on-1.70.jar stax2-api-4.2.1.jar ecj-3.21.0.jar jav
+ afx-controls-11.jar jfreechart-1.0.19.jar commons-beanutils-1.9.4.jar i
+ text-2.1.7.js10.jar jackson-core-2.13.3.jar
+

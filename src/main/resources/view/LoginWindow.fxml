@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="423.0" prefWidth="719.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.crewx.pos.controller.LoginController">
+    <children>
+        <AnchorPane layoutX="-22.0" prefHeight="443.0" prefWidth="426.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <ImageView fitHeight="102.0" fitWidth="109.0" layoutX="137.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/1.jpg" />
+                    </image>
+                </ImageView>
+                <AnchorPane layoutX="46.0" layoutY="138.0" prefHeight="272.0" prefWidth="287.0" style="-fx-border-color: #ec7905; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3;">
+                    <children>
+                        <Label layoutX="40.0" layoutY="28.0" prefHeight="22.0" prefWidth="92.0" text="Username">
+                            <font>
+                                <Font name="Consolas Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="txtUser" focusColor="#ec7905" layoutX="40.0" layoutY="52.0" prefHeight="33.0" prefWidth="202.0" unFocusColor="BLACK">
+                            <font>
+                                <Font name="Consolas Bold" size="17.0" />
+                            </font>
+                        </JFXTextField>
+                        <Label layoutX="42.0" layoutY="106.0" text="Password">
+                            <font>
+                                <Font name="Consolas Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <JFXPasswordField fx:id="txtPass" focusColor="#ec7905" layoutX="40.0" layoutY="129.0" prefHeight="33.0" prefWidth="202.0" unFocusColor="BLACK">
+                            <font>
+                                <Font name="Consolas Bold" size="17.0" />
+                            </font>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="btnLogin" layoutX="89.0" layoutY="199.0" onAction="#logging" prefHeight="39.0" prefWidth="102.0" ripplerFill="#ec7905" style="-fx-background-radius: 50; -fx-border-color: #ec7905; -fx-border-radius: 50; -fx-border-width: 3;" text="Login" textFill="#ec7905">
+                            <font>
+                                <Font name="Consolas Bold" size="17.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="32.0" layoutX="99.0" layoutY="-16.0" stroke="WHITE" strokeType="INSIDE" width="92.0" />
+                    </children>
+                </AnchorPane>
+                <ImageView fitHeight="82.0" fitWidth="77.0" layoutX="152.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/login1.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="135.0" fitWidth="126.0" layoutX="310.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/black-friday.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+          <ImageView fitHeight="92.0" fitWidth="201.0" layoutX="450.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../assets/shopping.png" />
+              </image>
+          </ImageView>
+          <ImageView fitHeight="118.0" fitWidth="123.0" layoutX="601.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../assets/shopping-online.png" />
+              </image>
+          </ImageView>
+          <ImageView fitHeight="338.0" fitWidth="299.0" layoutX="387.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../assets/22495661.jpg" />
+              </image>
+          </ImageView>
+    </children>
+</AnchorPane>

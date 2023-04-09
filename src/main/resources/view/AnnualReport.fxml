@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="557.0" prefWidth="521.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.crewx.pos.controller.AnnualReportController">
+    <children>
+        <AnchorPane layoutX="65.0" layoutY="83.0" prefHeight="420.0" prefWidth="388.0" style="-fx-border-color: #ec7905; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3;">
+            <children>
+                <ImageView fitHeight="117.0" fitWidth="125.0" layoutX="130.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/1.jpg" />
+                    </image>
+                </ImageView>
+                <Label fx:id="lblDiscount" layoutX="156.0" layoutY="309.0" prefHeight="27.0" prefWidth="208.0">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="23.0" layoutY="109.0" text="Total Orders :">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="24.0" layoutY="154.0" text="Total Earnings :">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="25.0" layoutY="204.0" text="Total Expenses :">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="27.0" layoutY="252.0" text="On Hnad :">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="29.0" layoutY="305.0" text="Date :">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblTotalOrders" layoutX="206.0" layoutY="110.0" prefHeight="22.0" prefWidth="159.0">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblTotalEarnings" layoutX="206.0" layoutY="154.0" prefHeight="22.0" prefWidth="159.0">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblTotalExpenses" layoutX="215.0" layoutY="204.0" prefHeight="22.0" prefWidth="159.0">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblOnHand" layoutX="205.0" layoutY="252.0" prefHeight="22.0" prefWidth="159.0">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblDate" layoutX="205.0" layoutY="305.0" prefHeight="22.0" prefWidth="159.0">
+                    <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

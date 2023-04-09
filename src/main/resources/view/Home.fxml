@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.crewx.pos.controller.HomeController">
+    <AnchorPane fx:id="dashboardContext" layoutX="-1.0" layoutY="-1.0" prefHeight="690.0" prefWidth="899.0" style="-fx-background-color: white;">
+        <AnchorPane layoutX="34.0" layoutY="11.0" prefHeight="83.0" prefWidth="181.0" style="-fx-background-radius: 30; -fx-border-color: #ec7905; -fx-border-radius: 30; -fx-border-width: 3;">
+            <Label layoutX="27.0" layoutY="13.0" text="Orders" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="22.0" />
+                </font>
+            </Label>
+            <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="24.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../assets/shopping-bag12.png" />
+            </ImageView>
+            <Label fx:id="lblOrders" layoutX="122.0" layoutY="51.0" text="564" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="20.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane layoutX="251.0" layoutY="11.0" prefHeight="83.0" prefWidth="183.0" style="-fx-background-radius: 30; -fx-border-color: #ec7905; -fx-border-radius: 30; -fx-border-width: 3;">
+            <Label layoutX="27.0" layoutY="13.0" text="Items" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="22.0" />
+                </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="24.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../assets/shopping-bag13.png" />
+            </ImageView>
+            <Label fx:id="lblItems" layoutX="115.0" layoutY="51.0" text="564" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="20.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane layoutX="471.0" layoutY="10.0" prefHeight="83.0" prefWidth="189.0" style="-fx-background-radius: 30; -fx-border-color: #ec7905; -fx-border-radius: 30; -fx-border-width: 3;">
+            <Label layoutX="27.0" layoutY="13.0" text="Categories" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="22.0" />
+                </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="24.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../assets/menu.png" />
+            </ImageView>
+            <Label fx:id="lblCategories" layoutX="121.0" layoutY="50.0" text="564" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="20.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane layoutX="700.0" layoutY="9.0" prefHeight="86.0" prefWidth="186.0" style="-fx-background-radius: 30; -fx-border-color: #ec7905; -fx-border-radius: 30; -fx-border-width: 3;">
+            <Label layoutX="27.0" layoutY="13.0" text="Suppliers" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="22.0" />
+                </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="34.0" layoutX="24.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../assets/raw-materials.png" />
+            </ImageView>
+            <Label fx:id="lblSuppliers" layoutX="115.0" layoutY="52.0" text="564" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="20.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+        <AnchorPane layoutX="34.0" layoutY="141.0" prefHeight="225.0" prefWidth="594.0" style="-fx-background-radius: 30; -fx-border-color: #ec7905; -fx-border-radius: 30; -fx-border-width: 3;">
+
+            <Label layoutX="27.0" layoutY="13.0" text="Daily Sales" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="22.0" />
+                </font>
+            </Label>
+            <LineChart fx:id="chartDailySales" layoutX="-7.0" layoutY="24.0" prefHeight="465.0" prefWidth="584.0" stylesheets="@../style/chartStyle.css">
+                <xAxis>
+                    <CategoryAxis label="Date">
+                        <tickLabelFont>
+                            <Font name="Consolas Bold" size="8.0" />
+                        </tickLabelFont>
+                    </CategoryAxis>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis side="LEFT" />
+                </yAxis>
+                <styleClass>
+                    <String fx:value="axis-label" />
+                    <String fx:value="chart" />
+                    <String fx:value="chart-alternative-row-fill" />
+                    <String fx:value="chart-content" />
+                    <String fx:value="chart-horizontal-grid-lines" />
+                    <String fx:value="chart-legend" />
+                    <String fx:value="chart-legend-item" />
+                    <String fx:value="chart-legend-item-symbol" />
+                    <String fx:value="chart-plot-background" />
+                    <String fx:value="chart-plot-background" />
+                    <String fx:value="chart-vertical-grid-lines" />
+                </styleClass>
+            </LineChart>
+
+        </AnchorPane>
+        <AnchorPane layoutX="655.0" layoutY="143.0" prefHeight="495.0" prefWidth="230.0" style="-fx-background-radius: 30; -fx-border-color: #ec7905; -fx-border-radius: 30; -fx-border-width: 3;">
+
+            <Label layoutX="27.0" layoutY="13.0" text="Stock" textFill="#0a0a0a">
+                <font>
+                    <Font name="Consolas Bold" size="22.0" />
+                </font>
+            </Label>
+            <PieChart fx:id="pieChart" layoutX="10.0" layoutY="47.0" prefHeight="362.0" prefWidth="211.0" stylesheets="@../style/pieChartStyle.css">
+                <styleClass>
+                    <String fx:value="chart-pie-label" />
+                    <String fx:value="chart-legend" />
+                    <String fx:value="chart-pie" />
+                    <String fx:value="chart-pie-label-line" />
+                    <String fx:value="default-color0" />
+                    <String fx:value="default-color1" />
+                    <String fx:value="default-color2" />
+                    <String fx:value="default-color3" />
+                    <String fx:value="default-color4" />
+                </styleClass>
+            </PieChart>
+
+        </AnchorPane>
+    </AnchorPane>
+</AnchorPane>

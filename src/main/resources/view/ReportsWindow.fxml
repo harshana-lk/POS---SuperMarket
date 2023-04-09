@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="899.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.crewx.pos.controller.ReportsWindowController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="317.0" prefHeight="317.0" prefWidth="405.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #ec7905; -fx-border-width: 3;">
+         <children>
+            <Label layoutX="106.0" layoutY="11.0" text="Daily Income">
+               <font>
+                  <Font name="Consolas Bold" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="166.0" fitWidth="200.0" layoutX="115.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/planner.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="83.0" layoutY="170.0" text="This includes daily">
+               <font>
+                  <Font name="Consolas Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="190.0" text="net profit of your store">
+               <font>
+                  <Font name="Consolas Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnDailyIncome" layoutX="119.0" layoutY="231.0" onAction="#viewDailyIncomeOnAction" prefHeight="55.0" prefWidth="151.0" ripplerFill="#ec7905" style="-fx-background-radius: 50; -fx-border-color: #ec7905; -fx-border-radius: 50; -fx-border-width: 3;" text="View" textFill="#ec7905">
+               <font>
+                  <Font name="Consolas Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane layoutX="465.0" layoutY="313.0" prefHeight="317.0" prefWidth="404.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #ec7905; -fx-border-width: 3;">
+         <children>
+            <Label layoutX="98.0" layoutY="19.0" text="Monthly Income">
+               <font>
+                  <Font name="Consolas Bold" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="116.0" fitWidth="187.0" layoutX="142.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/planning.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="68.0" layoutY="171.0" text="This includes monthly">
+               <font>
+                  <Font name="Consolas Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="191.0" text="net profit of your store">
+               <font>
+                  <Font name="Consolas Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnMonthlyIncome" layoutX="122.0" layoutY="234.0" onAction="#viewMonthlyIncomeOnAction" prefHeight="55.0" prefWidth="151.0" ripplerFill="#ff7b00" style="-fx-background-radius: 50; -fx-border-color: #ec7905; -fx-border-radius: 50; -fx-border-width: 3;" text="View" textFill="#ec7905">
+               <font>
+                  <Font name="Consolas Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+      <Line endX="-52.0" endY="-1.52587890625E-5" layoutX="927.0" layoutY="20.0" startX="-324.0" stroke="#ec7905" strokeWidth="3.0" />
+      <Label layoutX="298.0" layoutY="-11.0" text="Reports Form">
+         <font>
+            <Font name="Consolas Bold" size="45.0" />
+         </font>
+      </Label>
+      <Line endX="174.33331298828125" layoutX="119.0" layoutY="20.0" startX="-98.0" startY="-1.52587890625E-5" stroke="#ec7905" strokeWidth="3.0" />
+      <AnchorPane layoutX="25.0" layoutY="63.0" prefHeight="216.0" prefWidth="842.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #ec7905; -fx-border-width: 3;">
+         <children>
+            <Label layoutX="364.0" layoutY="15.0" text="Summary">
+               <font>
+                  <Font name="Consolas Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="229.0" layoutY="98.0" text="Cashier On Hand : ">
+               <font>
+                  <Font name="Consolas Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="457.0" layoutY="100.0" text="LKR">
+               <font>
+                  <Font name="Consolas Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCashierHand" layoutX="498.0" layoutY="100.0" text="LKR">
+               <font>
+                  <Font name="Consolas Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="624.0" layoutY="86.0" onAction="#viewEditMoney" prefHeight="55.0" prefWidth="151.0" ripplerFill="#f57600" style="-fx-background-radius: 50; -fx-border-color: #ec7905; -fx-border-radius: 50; -fx-border-width: 3;" text="View" textFill="#ec7905">
+               <font>
+                  <Font name="Consolas Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="204.0" fitWidth="210.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/research.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

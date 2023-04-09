@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="609.0" prefWidth="511.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.crewx.pos.controller.SummaryController">
+    <AnchorPane layoutX="62.0" layoutY="61.0" prefHeight="521.0" prefWidth="388.0" style="-fx-border-color: #ec7905; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3;">
+        <ImageView fitHeight="117.0" fitWidth="125.0" layoutX="130.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/1.jpg" />
+        </ImageView>
+        <Label layoutX="22.0" layoutY="123.0" text="Purchase ID : ">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblPurchaseID" alignment="CENTER_RIGHT" layoutX="154.0" layoutY="121.0" prefHeight="27.0" prefWidth="208.0">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="24.0" layoutY="171.0" text="Date : ">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="156.0" layoutY="169.0" prefHeight="27.0" prefWidth="208.0">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="220.0" text="SubTotal : ">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblSubTotal" alignment="CENTER_RIGHT" layoutX="157.0" layoutY="218.0" prefHeight="27.0" prefWidth="208.0">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="295.0" text="Cash : ">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtCash" alignment="CENTER_RIGHT" focusColor="#ec7905" layoutX="156.0" layoutY="283.0" prefHeight="31.0" prefWidth="208.0" unFocusColor="#0d0000" />
+        <JFXButton fx:id="btnPay" layoutX="151.0" layoutY="436.0" onAction="#payOnAction" prefHeight="50.0" prefWidth="87.0" ripplerFill="#ff7b00" style="-fx-background-radius: 50; -fx-border-color: #ec7905; -fx-border-radius: 50; -fx-border-width: 3;" text="Pay" textFill="#ec7905">
+            <font>
+                <Font name="Consolas Bold" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Label layoutX="25.0" layoutY="364.0" text="Balance : ">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblBalance" alignment="CENTER_RIGHT" layoutX="157.0" layoutY="362.0" prefHeight="27.0" prefWidth="208.0">
+            <font>
+                <Font name="Consolas Bold" size="18.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+    <ImageView fitHeight="22.0" fitWidth="28.0" layoutX="478.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../assets/close.png" />
+    </ImageView>
+    <JFXButton fx:id="btnClose" layoutX="469.0" layoutY="-1.0" prefHeight="39.0" prefWidth="42.0" ripplerFill="WHITE" text=" ">
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </JFXButton>
+</AnchorPane>

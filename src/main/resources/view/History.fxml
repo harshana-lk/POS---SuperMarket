@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="899.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.crewx.pos.controller.HistoryController">
+   <Line endX="-49.0" layoutX="925.0" layoutY="20.0" startX="-315.33331298828125" stroke="#ec7905" strokeWidth="3.0" />
+   <Label layoutX="301.0" layoutY="-8.0" text="History Form">
+      <font>
+         <Font name="Consolas Bold" size="45.0" />
+      </font>
+   </Label>
+   <Line endX="154.33331298828125" layoutX="135.0" layoutY="21.0" startX="-112.0" startY="-1.52587890625E-5" stroke="#ec7905" strokeWidth="3.0" />
+   <AnchorPane layoutX="23.0" layoutY="122.0" prefHeight="514.0" prefWidth="853.0" style="-fx-border-color: #ec7905; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3;">
+      <TableView fx:id="tblHistory" layoutX="44.0" layoutY="45.0" prefHeight="455.0" prefWidth="769.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="75.0" text="Order ID and Name" />
+            <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="colPrice" prefWidth="75.0" text="Paid" />
+            <TableColumn fx:id="toPaid" prefWidth="75.0" text="To paid" />
+            <TableColumn fx:id="colAction" prefWidth="75.0" text="Action" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </AnchorPane>
+   <Label fx:id="lblUnpaid" layoutX="665.0" layoutY="58.0" onMouseClicked="#unpaidOnAction" text="Unpaid Items -&gt;">
+      <font>
+         <Font name="Consolas Bold" size="24.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Label>
+   <TextField fx:id="txtSearch" layoutX="554.0" layoutY="103.0" prefHeight="37.0" prefWidth="246.0" promptText="Search here" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #ec7905; -fx-border-width: 3;" />
+   <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="764.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../assets/magnifying-glass.png" />
+      </image>
+   </ImageView>
+</AnchorPane>
