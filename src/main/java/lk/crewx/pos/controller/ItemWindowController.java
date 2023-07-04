@@ -32,6 +32,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -165,52 +166,56 @@ public class ItemWindowController {
         if (txtName.getText().equals("") || txtQty.getText().equals("") || txtSellingPrice.getText().equals("")
                 || txtDiscount.getText().equals("") || cbxSuppID.getValue().equals("") || cbxCategory.getValue().equals("")) {
             new Alert(Alert.AlertType.ERROR, "please enter correct details!").show();
-        } else if (Validator.isPriceMatch(txtDiscount.getText())) {
-            if (Validator.isPriceMatch(txtSellingPrice.getText())) {
-                if (!(Double.parseDouble(txtDiscount.getText()) > Double.parseDouble(txtSellingPrice.getText()))) {
-                    try {
-                        int id = Integer.parseInt(txtItemID.getText());
-                        double sellingPrice = Double.parseDouble(txtSellingPrice.getText());
-                        double qty = Double.parseDouble((txtQty.getText()));
-                        int supId = Integer.parseInt(cbxSuppID.getValue().toString());
-                        int catId = categoryID;
+        } else if (Validator.isNameMatch(txtName.getText())) {
+            if (Validator.isPriceMatch(txtDiscount.getText())) {
+                if (Validator.isPriceMatch(txtSellingPrice.getText())) {
+                    if (!(Double.parseDouble(txtDiscount.getText()) > Double.parseDouble(txtSellingPrice.getText()))) {
+                        try {
+                            int id = Integer.parseInt(txtItemID.getText());
+                            double sellingPrice = Double.parseDouble(txtSellingPrice.getText());
+                            double qty = Double.parseDouble((txtQty.getText()));
+                            int supId = Integer.parseInt(cbxSuppID.getValue().toString());
+                            int catId = categoryID;
 
-                        double discount = Double.parseDouble(txtDiscount.getText());
+                            double discount = Double.parseDouble(txtDiscount.getText());
 
-                        Item item = new Item(
-                                id,
-                                txtName.getText(),
-                                sellingPrice,
-                                supId,
-                                catId,
-                                qty,
-                                discount
-                        );
-                        boolean isUpdated = itemDAO.update(item);
-                        if (isUpdated) {
-                            clear();
-                            setItemId();
-                            loadAllData();
-                            new Alert(Alert.AlertType.CONFIRMATION, "Item Updated!").show();
+                            Item item = new Item(
+                                    id,
+                                    txtName.getText(),
+                                    sellingPrice,
+                                    supId,
+                                    catId,
+                                    qty,
+                                    discount
+                            );
+                            boolean isUpdated = itemDAO.update(item);
+                            if (isUpdated) {
+                                clear();
+                                setItemId();
+                                loadAllData();
+                                new Alert(Alert.AlertType.CONFIRMATION, "Item Updated!").show();
 
+                            }
+                        } catch (SQLException | ClassNotFoundException e) {
+                            e.printStackTrace();
                         }
-                    } catch (SQLException | ClassNotFoundException e) {
-                        e.printStackTrace();
+                    } else {
+                        new Alert(Alert.AlertType.ERROR, "Price less than discount").show();
                     }
                 } else {
-                    new Alert(Alert.AlertType.ERROR, "Price less than discount").show();
+                    new Alert(Alert.AlertType.ERROR, "enter correct price!").show();
+                    txtSellingPrice.requestFocus();
                 }
-            } else {
-                new Alert(Alert.AlertType.ERROR, "enter correct price!").show();
-                txtSellingPrice.requestFocus();
-            }
 
+            } else {
+                new Alert(Alert.AlertType.ERROR, "enter correct discount!").show();
+                txtDiscount.requestFocus();
+            }
         } else {
-            new Alert(Alert.AlertType.ERROR, "enter correct discount!").show();
-            txtDiscount.requestFocus();
+            new Alert(Alert.AlertType.ERROR, "enter correct Name!").show();
+            txtName.requestFocus();
         }
     }
-
 
     public void addOnAction(ActionEvent actionEvent) {
         if (txtName.getText().equals("") || txtQty.getText().equals("") || txtSellingPrice.getText().equals("")

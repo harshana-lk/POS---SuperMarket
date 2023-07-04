@@ -133,12 +133,12 @@
               <Line endX="-23.0" endY="-9.0" layoutX="97.0" layoutY="102.0" startX="-13.0" startY="-20.0" stroke="#ec7905" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="3.5" />
             </children>
         </AnchorPane>
-        <Label fx:id="lblDate" layoutX="135.0" layoutY="57.0" text="Tuesday,28 June 2022" textFill="#ec7905">
+        <Label fx:id="lblDate" layoutX="173.0" layoutY="58.0" text="Tuesday,28 June 2022" textFill="#ec7905">
             <font>
                 <Font name="Consolas Bold" size="19.0" />
             </font>
         </Label>
-        <ImageView fitHeight="53.0" fitWidth="152.0" layoutX="127.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="53.0" fitWidth="152.0" layoutX="165.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="706.8339920043945" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="707.0" AnchorPane.topAnchor="12.0">
             <image>
                 <Image url="@../assets/logo111.png" />
             </image>
@@ -154,9 +154,6 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-      <Label layoutX="729.0" layoutY="19.0" opacity="0.5" text="Powered By CrewX Technologies">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font></Label>
+      <Label layoutX="755.0" layoutY="8.0" opacity="0.75" text="Powered By CrewX Technologies" />
     </children>
 </AnchorPane>
